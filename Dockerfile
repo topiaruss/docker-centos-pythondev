@@ -49,5 +49,4 @@ RUN yum install -y yum-utils \
 #     && ln -s python2.7 python2 \
 #     && ln -s python-config2.7 python-config2
 
-#CMD ["python2"]
 CMD ["bash"]
