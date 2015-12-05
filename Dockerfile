@@ -36,7 +36,7 @@ RUN yum install -y \
     opencv*
 
 RUN yum install -y yum-utils \
-    && yum-builddep python-matplotlib
+    && yum-builddep -y python-matplotlib
 
 
 # must::   export PYTHONPATH=$PYTHONPATH:/usr/lib64/python2.7/site-packages
