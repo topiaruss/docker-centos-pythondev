@@ -31,6 +31,16 @@ RUN set -x \
 
 RUN pip install --no-cache-dir virtualenv
 
+RUN yum install \
+    numpy \
+    opencv*
+
+RUN yum install yum-utils \
+    && yum-builddep python-matplotlib
+
+
+# must::   export PYTHONPATH=$PYTHONPATH:/usr/lib64/python2.7/site-packages
+
 # make some useful symlinks that are expected to exist
 # RUN cd /usr/local/bin \
 #     && ln -s easy_install-2.7 easy_install2 \
