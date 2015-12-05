@@ -31,11 +31,11 @@ RUN set -x \
 
 RUN pip install --no-cache-dir virtualenv
 
-RUN yum install \
+RUN yum install -y \
     numpy \
     opencv*
 
-RUN yum install yum-utils \
+RUN yum install -y yum-utils \
     && yum-builddep python-matplotlib
 
 
